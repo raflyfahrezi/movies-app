@@ -1,5 +1,5 @@
 <app-page-wrapper title="Home">
   <app-wrapper>
-    <p>hello world</p>
+    <p *ngFor="let movie of movieList">{{ movie.title }}</p>
   </app-wrapper>
 </app-page-wrapper>
