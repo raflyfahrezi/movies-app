@@ -9,6 +9,8 @@ import { HomeComponent } from './modules/home/home.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { WrapperComponent } from './components/wrapper/wrapper.component';
 import { PageWrapperComponent } from './layout/page-wrapper/page-wrapper.component';
+import { CardComponent } from './components/card/card.component';
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
   providers: [],
@@ -20,6 +22,8 @@ import { PageWrapperComponent } from './layout/page-wrapper/page-wrapper.compone
     FooterComponent,
     WrapperComponent,
     PageWrapperComponent,
+    CardComponent,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,
