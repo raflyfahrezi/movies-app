@@ -1,0 +1,17 @@
+<ng-helmet>
+  <title>Detail</title>
+</ng-helmet>
+<app-header title="{{ movie?.title }}"></app-header>
+<app-wrapper>
+  <div class="movie">
+    <div>
+      <img
+        src="https://image.tmdb.org/t/p/w300/{{ movie?.poster_path }}"
+        alt=""
+      />
+    </div>
+    <div>
+      <p>{{ movie?.overview }}</p>
+    </div>
+  </div>
+</app-wrapper>
