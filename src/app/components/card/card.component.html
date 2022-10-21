@@ -1,6 +1,11 @@
-<div class="card">
-  <img src="https://image.tmdb.org/t/p/w300/{{ movie?.poster_path }}" alt="" />
-  <p class="title">
-    {{ movie?.title }} <span>{{ movie?.release_date | date: "yyyy" }}</span>
-  </p>
-</div>
+<a routerLink="/movie/{{ movie?.id }}">
+  <div class="card">
+    <img
+      src="https://image.tmdb.org/t/p/w300/{{ movie?.poster_path }}"
+      alt=""
+    />
+    <p class="title">
+      {{ movie?.title }} <span>{{ movie?.release_date | date: "yyyy" }}</span>
+    </p>
+  </div>
+</a>
