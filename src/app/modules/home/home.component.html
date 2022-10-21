@@ -1,8 +1,26 @@
 <app-page-wrapper title="Home">
   <app-header></app-header>
   <app-wrapper>
-    <div class="card-wrapper">
-      <app-card *ngFor="let movie of movieList" [movie]="movie"></app-card>
-    </div>
+    <ng-template
+      *ngIf="
+        movieList.length > 0;
+        then movieListNotLoading;
+        else movieListLoading
+      "
+    ></ng-template>
   </app-wrapper>
 </app-page-wrapper>
+
+<!-- Template -->
+
+<ng-template #movieListLoading>
+  <div>
+    <p>Loading</p>
+  </div>
+</ng-template>
+
+<ng-template #movieListNotLoading>
+  <div class="card-wrapper">
+    <app-card *ngFor="let movie of movieList" [movie]="movie"></app-card>
+  </div>
+</ng-template>
